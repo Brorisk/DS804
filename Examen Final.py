@@ -12,11 +12,14 @@ print(invTxt) #print
 
 #Ejercicio 2
 def fList(iList): #Function will use with it variable.
-    nList = []
-    if len(iList) == 0: #First check if all elements in the words have been done and therefore are equal to 0;
-        return fList #Variable that we are returning. 
-    else:
-        return nList
+    nList = {}
+
+    for element in iList:
+        order_element = ''.join(sorted(iList))
+
+    if order_element in nList:
+        nList[order_element].append()
+
 
   
 iList = ["apa", "oso", "paa", "soo"] #List of objects that we want to tuple with
@@ -24,7 +27,26 @@ tList = [tuple(iList) ] #Return the tuples list
 print(tList) #print
 
 #Ejercicio 3
+#dado una lista de entero y en un entero x, generar una funcion que 
+#regrese los indices de dos elementos de la lista curya suma
+#sea igual a x.
 
+def encPuesto(vrt, index):
+    obj = {}
+
+    #genera una lista para enumerar los indices.
+    for i, vrts in enList(vrt):
+        #variable que almacena el ciclo de las ubicaciones.
+        move = index - vrt
+        if move in obj:
+            return [obj[move], i]
+        obj[move] = i
+
+dig = [1,2,3,4,5]
+tot = 7
+
+res = encPuesto(dig, tot)
+print(res)
 
 #Ejercicio 4
 '''
