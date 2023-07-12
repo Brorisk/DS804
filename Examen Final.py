@@ -31,16 +31,17 @@ print(tList) #print
 #regrese los indices de dos elementos de la lista curya suma
 #sea igual a x.
 
-def encPuesto(vrt, index):
+def encPuesto(vrts, index):
     obj = {}
 
     #genera una lista para enumerar los indices.
-    for i, vrts in enList(vrt):
+    for i, vrt in enumerate(vrts):
         #variable que almacena el ciclo de las ubicaciones.
         move = index - vrt
         if move in obj:
             return [obj[move], i]
         obj[move] = i
+    return None
 
 dig = [1,2,3,4,5]
 tot = 7
