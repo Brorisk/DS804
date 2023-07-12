@@ -16,14 +16,13 @@ def fList(iList): #Function will use with it variable.
 
     for element in iList:
         order_element = ''.join(sorted(iList))
-
-    if order_element in nList:
-        nList[order_element].append()
-
-
+        nList[order_element].append(element)
+        
+        newTuples = [tuple(vlt) for vlt in nList.values()]
+        return newTuples
   
-iList = ["apa", "oso", "paa", "soo"] #List of objects that we want to tuple with
-tList = [tuple(iList) ] #Return the tuples list 
+bList = ["apa", "oso", "paa", "soo"] #List of objects that we want to tuple with
+tList = fList(bList) #Return the tuples list 
 print(tList) #print
 
 #Ejercicio 3
